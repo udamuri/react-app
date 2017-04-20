@@ -1,7 +1,6 @@
 // src/components/About/index.js
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Header from './../../header.jsx';
 import { Row, Col  } from 'react-bootstrap';
 import './style.css';
 
@@ -21,8 +20,7 @@ class About extends Component {
     const { className, ...props } = this.props;
     return (
        <div className={classnames('About', className)} {...props}>
-        <Header />
-        <div className="container">
+        <div className="container-fluid">
           {AboutMe}
         </div>
       </div>

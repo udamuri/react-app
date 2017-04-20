@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavDropdown, MenuItem, NavItem  } from 'react-bootstrap';
-
-const navbarInstance = (
-  <Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href="#">EXTARNET</a>
-      </Navbar.Brand>
-    </Navbar.Header>
-    <Nav>
-      <NavItem eventKey={1} href="#">Link</NavItem>
-      <NavItem eventKey={2} href="#">Link</NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={3.4}>Separated link</MenuItem>
-      </NavDropdown>
-    </Nav>
-  </Navbar>
-);
+import logo from './ra_logo_sm.png';
 
 class Header extends Component {
   render() {
-    return (<div>{navbarInstance}</div>);
+    return (
+    	<nav className="navbar navbar-default">
+	      <div className="container-fluid">
+	        <div className="navbar-header">
+	          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span className="sr-only">Toggle navigation</span>
+	            <span className="icon-bar"></span>
+	            <span className="icon-bar"></span>
+	            <span className="icon-bar"></span>
+	          </button>
+	          <a className="navbar-brand" href="/">
+	            	<img src={logo} />
+	          </a>
+	        </div>
+	        <div id="navbar" className="navbar-collapse collapse">
+	          <ul className="nav navbar-nav">
+	            <li><a href="/">Home</a></li>
+	            <li><a href="/About">About</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+   	);
   }
 }
 

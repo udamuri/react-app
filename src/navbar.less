@@ -1,9 +1,8 @@
-// @bgDefault      : #9b59b6;
 @bgDefault      : #ac2431;
-// @bgHighlight    : #8e44ad;
 @bgHighlight    : #9b0c18;
 @colDefault     : #ecf0f1;
 @colHighlight   : #ffd8db;
+@colWhite       : #ffffff;
 @dropDown       : false;
 .ddm() when (@dropDown) {
   > li > .dropdown-menu {
@@ -26,8 +25,14 @@
   .border-radius(0);
   .navbar-brand {
     color: @colDefault;
+    padding: 2px;
+    margin: 0;
+    background-color: @colWhite;
+    img {
+         max-height: 100%;
+    }
     &:hover, &:focus {
-      color: @colHighlight; }}
+      color: @colHighlight; background-color: @colWhite; }}
   .navbar-text {
     color: @colDefault; }
   .navbar-nav {

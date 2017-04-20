@@ -2,8 +2,16 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Header from './../../header.jsx';
+import { Row, Col  } from 'react-bootstrap';
 import './style.css';
 
+const AboutMe = (
+  <Row className="show-grid">
+    <Col sm={12} md={12}>
+        About
+    </Col>
+  </Row>
+);
 class About extends Component {
   static propTypes = {}
   static defaultProps = {}
@@ -14,9 +22,9 @@ class About extends Component {
     return (
        <div className={classnames('About', className)} {...props}>
         <Header />
-        <p className="App-intro">
-         About
-        </p>
+        <div className="container">
+          {AboutMe}
+        </div>
       </div>
 
     );

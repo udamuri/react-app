@@ -16,9 +16,9 @@ class App extends Component {
     return (
       <div className={classnames('App', className)} {...props}>
         <Header />
-        <p className="App-intro">
+        <div className="container">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </div>
       </div>
     );
   }

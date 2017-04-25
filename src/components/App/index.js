@@ -2,6 +2,7 @@
 import React, { Component, ListItem  } from 'react';
 import classnames from 'classnames';
 import Request from 'react-http-request';
+import { Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 import './style.css';
 
@@ -36,8 +37,17 @@ class GetData extends Component {
                     <p>{post.body}</p>
                   </div>
                 );
+                const panelInstance = textResults.map((post) =>
+                  <Panel collapsible defaultExpanded key={post.id} header={post.title}>
+                    <ListGroup fill >
+                      <ListGroupItem >
+                        <p>{post.body}</p>
+                      </ListGroupItem>
+                    </ListGroup>
+                  </Panel>
+                );
                 return <div>
-                  {content}
+                  {panelInstance}
                 </div>;
               } else {
               return <div>{JSON.stringify(result.text)}</div>;

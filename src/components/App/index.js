@@ -50,7 +50,7 @@ class GetData extends Component {
                   {panelInstance}
                 </div>;
               } else {
-              return <div>{JSON.stringify(result.text)}</div>;
+                return <div>{JSON.stringify(result.text)}</div>;
             }
           }
         }
